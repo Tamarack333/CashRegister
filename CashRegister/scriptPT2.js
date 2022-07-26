@@ -23,7 +23,7 @@ function checkCashRegister(price, cash, cid) {
     }
   })
   if ( totalDue === totalCID){
-    return {status: "CLOSED", change: cid};
+    return {status: "CLOSED", change: cid.reverse()};
   }
   if ( changeDue > 0 ){
     return {status: "INSUFFICIENT_FUNDS", change: []};
